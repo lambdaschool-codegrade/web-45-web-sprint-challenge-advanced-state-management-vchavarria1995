@@ -24,10 +24,10 @@ export const reducer = ( state = initialState, action ) => {
                 errorMessage: action.payload
             }
         case ADD_SMURF:
-            return [
+            return {...state, smurfs:[
                 ...state.smurfs,
                 action.payload
-            ]
+            ]}
         case ERROR_MESSAGE:
             return {
                 ...state,
